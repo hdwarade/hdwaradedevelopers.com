@@ -28,13 +28,33 @@
             left: 50%;
             transform: translate(-50%,-50%);
             padding: 10px 30px;
-            box-shadow: 0 0 40px lime;
+            box-shadow: 0 0 30px yellow;
             color: #888;
             height: 480px;
             width: 360px;
             font-family: poppins regular;
             font-size: 18px;
             border-radius: 12px;
+            animation: org 3s linear infinite;
+        }
+        @keyframes org{
+            0%{
+                box-shadow: 0 0 30px yellow;
+            }
+            25%
+            {
+                box-shadow: 0 0 30px lime;
+            }
+            50%{
+                box-shadow: 0 0 30px red;
+            }
+            75%{
+                box-shadow: 0 0 30px orangered;
+            }
+            100%
+            {
+                box-shadow: 0 0 30px yellow;
+            }
         }
         .my
         {
@@ -45,8 +65,8 @@
         }
         a{
             color: #000;
-            background: lime;
-            box-shadow: 0 0 20px lime;
+            background: yellow;
+            box-shadow: 0 0 20px yellow;
             padding: 10px 30px;
             text-decoration: none;
             position: absolute;
@@ -54,7 +74,36 @@
             left: 48%;
             border-radius: 50px;
             transform: translate(-50%,-50%);
-            
+            animation: type 3s linear infinite;
+        }
+        @keyframes type
+        {
+            0%{
+                background: yellow;
+                color: #000;
+                box-shadow: 0 0 30px yellow;
+            }
+            25%{
+                background: lime;
+                color: #000;
+                box-shadow: 0 0 30px lime;
+            }
+            50%{
+                background: red;
+                color: #fff;
+                box-shadow: 0 0 30px red;
+            }
+            75%{
+                background: orange;
+                color: #000;
+                box-shadow: 0 0 30px orange;
+            }
+            100%
+            {
+                background: yellow;
+                color: #000;
+                box-shadow: 0 0 30px yellow;
+            }
         }
     </style>
 </body>
