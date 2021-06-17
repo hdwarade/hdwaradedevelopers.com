@@ -1,0 +1,58 @@
+*
+{
+	font-family: poppins;
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background: #00041d;
+}
+a
+{
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	margin: 10px 0;
+	color: #fff;
+	overflow: hidden;
+	text-decoration: none;
+	font-size: 18px;
+	letter-spacing: 2px;
+	border-radius: 0px;
+	background: linear-gradient(90deg,#7557da,#4a17f3);
+}
+a:nth-child(2)
+{
+	background: linear-gradient(90deg,#ff4242,#c70d3b)
+}
+span
+{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: hd 1s linear infinite;
+}
+@keyframes hd
+{
+	0%
+	{
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100%
+	{
+		width: 500px;
+		opacity: 0;
+		height: 500px;
+	}
+}
