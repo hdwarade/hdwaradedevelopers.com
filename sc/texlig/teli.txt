@@ -1,0 +1,112 @@
+===================html====================
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Glowing_Text</title>
+    <link rel="stylesheet" href="light.css">
+</head>
+
+<body>
+    <h2>
+        <span>L</span>
+        <span>O</span>
+        <span>V</span>
+        <span>E</span>
+        <span>C</span>
+        <span>S</span>
+        <span>S</span>
+        <span>3</span>
+    </h2>
+</body>
+
+</html>
+
+
+
+==========================CSS===========
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: poppins regular;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    /* color: #333; */
+}
+h2
+{
+    color: #333;
+    font-size: 6rem;
+}
+h2 span
+{ 
+    animation: light 2.4s linear infinite;
+}
+h2 span:nth-child(1)
+{
+    animation-delay: 0s;
+    color: #df2c49;
+}
+h2 span:nth-child(2)
+{
+    animation-delay: 0.3s;
+}
+h2 span:nth-child(3)
+{
+    animation-delay: 0.6s;
+}
+h2 span:nth-child(4)
+{
+    animation-delay: 0.9s;
+}
+h2 span:nth-child(5)
+{
+    animation-delay: 1.2s;
+}
+h2 span:nth-child(6)
+{
+    animation-delay: 1.5s;
+}
+h2 span:nth-child(7)
+{
+    animation-delay: 1.8s;
+}
+h2 span:nth-child(8)
+{
+    animation-delay: 2.1s;
+}
+@keyframes light
+{
+    0%,80%
+    {
+        color: #3333333b;
+        text-shadow: none;
+    }
+    100%
+    {
+        color: #fb2eea;
+        text-shadow: 0 0 10px #fb2eea,
+                    0 0 20px #fb2eea,
+                    0 0 40px #fb2eea;
+    }
+}
+@media screen and (max-width: 800px){
+    h2
+    {
+        font-size: 4rem;
+    }
+}

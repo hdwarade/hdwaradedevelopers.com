@@ -1,0 +1,126 @@
+----HTML----
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ripples_effect</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<a href="#">Button</a>
+	<a href="#">Button</a>
+	<script type="text/javascript" src="javascript.js">
+	</script>
+</body>
+</html>
+
+-----CSS------
+*
+{
+	font-family: poppins;
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background: #00041d;
+}
+a
+{
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	margin: 10px 0;
+	color: #fff;
+	overflow: hidden;
+	text-decoration: none;
+	font-size: 18px;
+	letter-spacing: 2px;
+	border-radius: 0px;
+	background: linear-gradient(90deg,#7557da,#4a17f3);
+}
+a:nth-child(2)
+{
+	background: linear-gradient(90deg,#ff4242,#c70d3b)
+}
+span
+{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: hd 1s linear infinite;
+}
+@keyframes hd
+{
+	0%
+	{
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100%
+	{
+		width: 500px;
+		opacity: 0;
+		height: 500px;
+	}
+}
+
+
+------JavaScript------
+
+const buttons = document.querySelectorAll('a');
+		buttons.forEach(btn => {
+		btn.addEventListener('click', function(e) {
+
+		let x = e.clientX - e.target.offsetLeft;
+		let y = e.clientY - e.target.offsetTop;
+
+		let ripples = document.createElement('span');
+		ripples.style.left = x + 'px';
+		ripples.style.top = y + 'px';
+		this.appendChild(ripples);
+
+		setTimeout(() => {
+			ripples.remove()
+		},1000);
+	})
+})
+
+/*
+
+Put this code to your CSS sheet 
+........................................
+span
+{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: hd 1s linear infinite;
+}
+@keyframes hd
+{
+	0%
+	{
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100%
+	{
+		width: 500px;
+		opacity: 0;
+		height: 500px;
+	}
+}
+*/

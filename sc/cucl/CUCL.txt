@@ -1,0 +1,101 @@
+===================================HTML PART=======================================
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cube climbing</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="st.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="cube"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+=========================================CSS PART===================================
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    transform: rotate(-35deg);
+}
+.container .box
+{
+    display: flex;
+    left: -200px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% + 400px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    animation: animatesurface 1.5s ease-in-out infinite;
+}
+@keyframes animatesurface
+{
+    0%
+    {
+        transform: translateX(0px);
+    }
+    100%
+    {
+        transform: translateX(-200px);
+    }
+}
+.container .box .cube
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: orange;
+    box-shadow: 0 0 5px orange,
+    0 0 25px orange,
+    0 0 50px orange,
+    0 0 100px orange;
+    animation: harshal 1.5s ease-in-out infinite;
+    transform-origin: bottom right;
+}
+@keyframes harshal
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    60%
+    {
+        transform: rotate(90deg);
+    }
+    65%
+    {
+        transform: rotate(85deg);
+    }
+    70%
+    {
+        transform: rotate(90deg);
+    }
+    75%
+    {
+        transform: rotate(87.5deg);
+    }
+    80%,100%
+    {
+        transform: rotate(90deg);
+    }
+}
