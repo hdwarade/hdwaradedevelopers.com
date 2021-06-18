@@ -180,16 +180,42 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
+    <!-- style="display: flex; justify-content: center; margin: 50px 0; box-sizing: border-box; text-decoration: none; background: #2b2bff; padding: 10px;color: #fff -->
     <div class="px-4 py-5 my-5 text-center">
-        <h1 class="display-5 fw-bold">My coding gallery. Anyone can visit.</h1>
+        <h1 class="display-5 fw-bold">My Coding Gallery.</h1>
+        <div class="jo"><!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary my-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              What's new in your site?
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New things added</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                        <li style="line-height: 44px;">"My Projects" section is updated. <a href="project.html" style="text-decoration: none; padding: 5px 15px;background: #4319ff;color: #fff;">Click to check</a></li>
+                        <li>In "My Project" section you can even download or copy the code to make the same result.</li>
+                        <li>One could now play around my codes.</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
         <br>
         <br>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">You probabily are at the right place if you are a complete beginner to coding. Here you can get all the basic
-                project which a beginner can make with his/her knowledge. You will sometimes able to see complex projects, but never mind i'll keep sharing source codes. Stay tunned.</p>
+            <p class="lead mb-4">You probabily are at the right place if you are a complete beginner to coding. Here you can get all the basic HTML5, CSS3 and JavaScript project which a beginner's mind can design. You can find some complex codes but you can get its source code in a single click. Stay tunned.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="project.html" class="link-primary" style="padding: 10px 30px; background: #0A58CA; color: #fff; text-decoration: none; box-shadow: 0 0 20px #0A58CA;">My Projects</a>
+                <a href="project.html" class="link-primary" style="padding: 10px 30px; background: #0A58CA; color: #fff; text-decoration: none; box-shadow: 0 0 20px #0A58CA;">My Projects<span class="badge bg-warning text-dark">NEW</span></a>
                 <a href="index.zip" class="link-warning" style="padding: 10px 30px; background: #992cff; color: #fff; text-decoration: none; box-shadow: 0 0 20px #992cff;"
                     download>Download Beginner Sample</a>
                 <a href="sab.html" class="link-warning" style="padding: 10px 30px; background: #d8240d; color: #fff; text-decoration: none; box-shadow: 0 0 20px #d8240d;">Show me demo Creation</a>
